@@ -132,3 +132,34 @@
 ## 3.3.3
 
 * Fix build script of Android plugin and remove AGP version requirement (#110)
+
+## 3.4.0
+
+* Add support for reading / write MIFARE Classic / Ultralight tags on Android (merged #82, partially fixes #82)
+* Add support for reading / write ISO 15693 tags on iOS (merged #117, partially fixes #68)
+* Fix compiling issues (#123)
+* Other minor fixes (#114, #115)
+
+## 3.4.1
+
+**This version is *deprecated* due to a bug in Mifare tag handling. Please upgrade to 3.4.2.**
+
+* Fix & split examples to example/ dir
+* Publish examples to pub.dev
+* Support transceiving of raw ISO15693 commands on iOS
+
+## 3.4.2
+
+* Fix polling error on Mifare tags (#126, #128, #129, #133)
+
+## 3.5.0
+
+* Some FeliCa improvements by @shiwano:
+  * Fix missing `id` field in FeliCa card reading on iOS (#140)
+  * Set the IDm to the `id` and the PMm to the `manufacturer` on iOS (#140)
+* Add `iosRestartPolling` method by @rostopira (#151)
+* Fix type assertion in `authenticateSector` (fix #148)
+* Refine exception handling in Android plugin (fix #91 and #149)
+* Bump multiple dependencies:
+  * Android plugin / example app: Java 17, AGP 7.4.2, Kotlin 1.9.23, minSdkVersion 26 (fix #127, #144, #145)
+  * `js` library: 0.7.1
